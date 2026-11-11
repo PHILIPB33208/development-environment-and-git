@@ -1,0 +1,137 @@
+/* Mobile-first styles for Jadex Electrical Services */
+:root {
+  --ink: #18343b;
+  --muted: #52666b;
+  --brand: #0d5968;
+  --brand-dark: #083d49;
+  --accent: #f5b942;
+  --paper: #ffffff;
+  --soft: #eef5f6;
+  --line: #d8e3e5;
+  --radius: 16px;
+  --shadow: 0 12px 32px rgba(15, 54, 63, .09);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+:focus-visible { outline: 3px solid #c47a00; outline-offset: 4px; }
+
+.container { width: min(100% - 2rem, 1120px); margin-inline: auto; }
+.skip-link {
+  position: absolute; left: 1rem; top: -5rem; z-index: 20;
+  padding: .7rem 1rem; background: var(--paper); color: var(--ink);
+}
+.skip-link:focus { top: 1rem; }
+
+.site-header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header-inner {
+  min-height: 76px; display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: .8rem;
+}
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); }
+.brand-mark {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  border-radius: 12px; background: var(--accent); color: var(--brand-dark);
+  font-size: 1.5rem; font-weight: 800;
+}
+.brand-name { font-size: 1.05rem; font-weight: 800; line-height: 1.2; }
+.brand-name small { display: block; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+
+.menu-toggle { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.menu-button {
+  display: inline-flex; align-items: center; gap: .5rem; padding: .6rem .8rem;
+  border: 1px solid var(--line); border-radius: 10px; color: var(--ink);
+  font-weight: 700; cursor: pointer;
+}
+.menu-button::before { content: "☰"; font-size: 1.2rem; }
+.menu-toggle:focus-visible + .menu-button { outline: 3px solid #c47a00; outline-offset: 4px; }
+.primary-nav { display: none; flex-basis: 100%; }
+.menu-toggle:checked ~ .primary-nav { display: block; }
+.primary-nav ul { list-style: none; display: grid; gap: .25rem; padding: .5rem 0 0; margin: 0; }
+.primary-nav a {
+  display: block; padding: .7rem .8rem; border-radius: 9px;
+  text-decoration: none; font-weight: 700;
+}
+.primary-nav a:hover, .primary-nav a[aria-current="page"] { background: var(--soft); color: var(--brand-dark); }
+
+.hero { padding: 3rem 0; background: linear-gradient(135deg, #eef6f7, #fff 72%); }
+.hero-grid { display: grid; gap: 2rem; align-items: center; }
+.eyebrow { color: var(--brand); font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+h1, h2, h3 { line-height: 1.18; }
+h1 { margin: .5rem 0 1rem; font-size: clamp(2.1rem, 8vw, 3.8rem); letter-spacing: -.04em; }
+h2 { margin: 0 0 1rem; font-size: clamp(1.65rem, 5vw, 2.4rem); }
+h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+.lead { max-width: 62ch; color: var(--muted); font-size: 1.1rem; }
+.hero-art { width: 100%; max-width: 520px; margin-inline: auto; }
+.button {
+  display: inline-block; margin-top: 1rem; padding: .85rem 1.15rem;
+  border-radius: 10px; background: var(--brand); color: white;
+  text-decoration: none; font-weight: 800;
+}
+.button:hover { background: var(--brand-dark); color: white; }
+.button.secondary { background: var(--accent); color: var(--brand-dark); }
+
+.section { padding-block: 3rem; }
+.section.soft { background: var(--soft); }
+.section-intro { max-width: 68ch; margin-bottom: 1.5rem; color: var(--muted); }
+.cards { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.card {
+  padding: 1.3rem; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper); box-shadow: var(--shadow);
+}
+.card p { margin-bottom: 0; color: var(--muted); }
+.icon { display: inline-grid; place-items: center; width: 42px; height: 42px; margin-bottom: .8rem; border-radius: 12px; background: #fff1cf; font-size: 1.3rem; }
+.page-heading { padding: 2.6rem 0; background: var(--soft); }
+.page-heading h1 { font-size: clamp(2rem, 7vw, 3.2rem); margin-bottom: .5rem; }
+.page-heading p { max-width: 68ch; margin: 0; color: var(--muted); }
+.split { display: grid; gap: 1.5rem; align-items: center; }
+.check-list { padding-left: 1.2rem; }
+.check-list li { margin-block: .45rem; }
+.callout { padding: 1.5rem; border-radius: var(--radius); background: var(--brand-dark); color: white; }
+.callout p { color: #e3eff1; }
+
+.contact-grid { display: grid; gap: 1.5rem; }
+.contact-details { padding: 1.4rem; border-radius: var(--radius); background: var(--soft); }
+.contact-details p { overflow-wrap: anywhere; }
+form { display: grid; gap: 1rem; }
+label { display: block; margin-bottom: .35rem; font-weight: 700; }
+input, textarea, select {
+  width: 100%; padding: .8rem; border: 1px solid #9aafb4;
+  border-radius: 9px; color: var(--ink); background: white; font: inherit;
+}
+textarea { min-height: 140px; resize: vertical; }
+button[type="submit"] { width: fit-content; border: 0; cursor: pointer; font: inherit; }
+.form-note { color: var(--muted); font-size: .9rem; }
+
+.site-footer { padding: 2rem 0; background: #092f38; color: #eaf3f4; }
+.footer-inner { display: grid; gap: .7rem; }
+.site-footer p { margin: 0; }
+.site-footer a { color: #fff; }
+
+@media (min-width: 640px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split, .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
+}
+
+@media (min-width: 860px) {
+  .header-inner { flex-wrap: nowrap; }
+  .menu-button { display: none; }
+  .primary-nav { display: block; flex-basis: auto; }
+  .primary-nav ul { display: flex; align-items: center; gap: .2rem; padding: 0; }
+  .hero { padding-block: 4.5rem; }
+  .hero-grid { grid-template-columns: 1.1fr .9fr; }
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .section { padding-block: 4.5rem; }
+}

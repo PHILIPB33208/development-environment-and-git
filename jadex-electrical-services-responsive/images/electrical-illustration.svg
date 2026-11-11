@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+<title id="title">Electrical services illustration</title>
+<desc id="desc">An illustration of a house, an electrical bolt, and tools.</desc>
+<rect width="720" height="480" rx="28" fill="#e8f2f5"/>
+<circle cx="580" cy="95" r="54" fill="#c9e2e8"/>
+<path d="M115 230 360 65l245 165v185H115z" fill="#fff" stroke="#174b59" stroke-width="12" stroke-linejoin="round"/>
+<path d="M75 238 360 42l285 196" fill="none" stroke="#174b59" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="300" y="275" width="120" height="140" rx="8" fill="#d5e9ed" stroke="#174b59" stroke-width="10"/>
+<path d="m375 105-80 150h63l-22 110 93-163h-66z" fill="#f5b942" stroke="#174b59" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="180" cy="320" r="38" fill="#f5b942"/>
+<path d="M164 320h32M180 304v32" stroke="#174b59" stroke-width="9" stroke-linecap="round"/>
+</svg>
